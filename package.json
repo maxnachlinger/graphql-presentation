@@ -6,10 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://gecgithub01.walmart.com/m0n0096/graphql-presentation"
-  },
   "dependencies": {
     "bluebird": "3.5.0",
     "boom": "5.2.0",
