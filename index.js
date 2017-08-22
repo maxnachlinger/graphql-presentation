@@ -44,7 +44,7 @@ const setupGraphQL = ({ server, models, Sequelize, sequelize }) => {
     options: {
       path: '/graphql',
       graphqlOptions: (request) => {
-        const { peopleLoader, addressesLoader } = operations.getLoaders(models);
+        const { addressesLoader } = operations.getLoaders(models);
 
         return {
           schema,
@@ -53,7 +53,6 @@ const setupGraphQL = ({ server, models, Sequelize, sequelize }) => {
             models,
             Sequelize,
             sequelize,
-            peopleLoader,
             addressesLoader
           }
         };
