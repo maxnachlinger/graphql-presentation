@@ -1,0 +1,91 @@
+query {
+  people {
+    id
+    firstName
+    lastName
+    username
+    email
+    addresses {
+      id
+      addressTypeId
+      address
+      address2
+      district
+      city
+      postalCode
+    }
+  }
+}
+
+query {
+  people(username: "cmoyers0") {
+    id
+    firstName
+    lastName
+    username
+    email
+    addresses {
+      id
+      addressTypeId
+      address
+      address2
+      district
+      city
+      postalCode
+    }
+  }
+}
+
+query {
+  people(username: "cmoyers0") {
+    id
+    firstName
+    lastName
+    username
+    email
+    addresses(addressTypeId: home) {
+      id
+      addressTypeId
+      address
+      address2
+      district
+      city
+      postalCode
+    }
+  }
+}
+
+query {
+  colly: people(username: "cmoyers0") {
+    id
+    firstName
+    lastName
+    username
+    email
+    addresses(addressTypeId: work) {
+      id
+      addressTypeId
+      address
+      address2
+      district
+      city
+      postalCode
+    }
+  }
+  marget: people(username: "mpoone1") {
+    id
+    firstName
+    lastName
+    username
+    email
+    addresses(addressTypeId: home) {
+      id
+      addressTypeId
+      address
+      address2
+      district
+      city
+      postalCode
+    }
+  }
+}

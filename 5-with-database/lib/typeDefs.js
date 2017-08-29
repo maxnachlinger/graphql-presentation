@@ -8,7 +8,7 @@ module.exports = `
   }
   
   type Address {
-    id: Int!
+    id: ID!
     addressTypeId: AddressTypeId!
     address: String!
     address2: String
@@ -18,7 +18,7 @@ module.exports = `
   }
   
   type Person {
-    id: Int!
+    id: ID!
     firstName: String!
     lastName: String!
     username: String!
@@ -44,7 +44,7 @@ module.exports = `
   }
   
   input ChangePersonInput {
-    id: Int!
+    id: ID!
     firstName: String!
     lastName: String!
     username: String!
@@ -53,7 +53,7 @@ module.exports = `
   }
   
   type ChangeResult {
-    id: Int!
+    id: ID!
   }
   
   type Query {
@@ -63,6 +63,6 @@ module.exports = `
   type Mutation {
     addPerson (person: NewPersonInput!): ChangeResult
     updatePerson (person: ChangePersonInput!): ChangeResult
-    deletePerson (id: Int!): ChangeResult
+    deletePerson (id: ID!): ChangeResult
   }
 `;

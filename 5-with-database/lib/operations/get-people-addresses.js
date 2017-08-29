@@ -1,7 +1,7 @@
 'use strict';
 
 const _ = require('lodash');
-const { idToType, typeToId } = require('./address-type-to-id-map');
+const { idToType, typeToId } = require('./validation/address-type-to-id-map');
 
 module.exports = ({ models, peopleIdsAddressTypes }) => {
   const { resultMap, personAddressTypeMap, peopleIds, addressTypeIdMap } = _.reduce(

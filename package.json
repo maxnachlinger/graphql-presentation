@@ -2,9 +2,20 @@
   "name": "graphql-presentation",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./5-with-database/index.js",
   "scripts": {
-    "start": "node index.js"
+    "graphiql": "open http://localhost:3000/graphiql",
+    "start": "node ./5-with-database/index.js",
+    "example0": "node ./0-simple/index.js",
+    "example1": "node ./1-simple-with-args/index.js",
+    "example2": "node ./2-related-types-with-args/index.js",
+    "example3": "node ./3-dataloader/index.js",
+    "example4": "node ./4-mutation/index.js",
+    "example5": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gecgithub01.walmart.com/m0n0096/graphql-presentation"
   },
   "dependencies": {
     "bluebird": "3.5.0",
@@ -16,6 +27,7 @@
     "graphql-server-hapi": "1.0.0",
     "graphql-tools": "1.2.1",
     "hapi": "16.4.3",
+    "joi": "10.6.0",
     "lodash": "4.17.4",
     "mysql2": "1.4.0",
     "sequelize": "4.5.0"

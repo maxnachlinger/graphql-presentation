@@ -1,0 +1,19 @@
+query {
+  people {
+    id
+    firstName
+    lastName
+    username
+    email
+  }
+}
+
+query {
+  people(username: "ctegler2") {
+    id
+    firstName
+    lastName
+    username
+    email
+  }
+}

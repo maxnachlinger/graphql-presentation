@@ -2,10 +2,17 @@
 
 const _ = require('lodash');
 const Promise = require('bluebird');
+const joi = require('joi');
 const boom = require('boom');
-const { typeToId } = require('./address-type-to-id-map');
+const { typeToId } = require('./validation/address-type-to-id-map');
+const { insertSchema } = require('./validation/person');
 
 module.exports = ({ models, Sequelize, sequelize, person }) => {
+  const { error } = joi.validate(person, insertSchema);
+  if (error) {
+    return Promise.reject(error);
+  }
+
   const { username } = person;
   const isolationLevel = Sequelize.Transaction.ISOLATION_LEVELS.REPEATABLE_READ;
 

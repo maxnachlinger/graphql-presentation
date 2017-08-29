@@ -1,0 +1,48 @@
+mutation {
+  addPerson(person: {
+    firstName: "test-new",
+    lastName: "test-last",
+    username: "test-username",
+    email: "test-username@test.com",
+    addresses: [{
+      addressTypeId: home,
+      address: "12 SW 12 ST",
+      district: "FL",
+      city: "Miami",
+      postalCode: "33156"
+    }, {
+     addressTypeId: work,
+     address: "13 SW 13 ST",
+     district: "FL",
+     city: "Miami",
+     postalCode: "33156"
+   }]
+  }) {
+    id
+  }
+}
+
+mutation {
+  updatePerson(person: {
+    id: 1001,
+    firstName: "test-new-updated",
+    lastName: "test-last-updated",
+    username: "test-username-updated",
+    email: "test-username-updated@test.com",
+    addresses: [{
+      addressTypeId: home,
+      address: "12 SW 12 ST",
+      district: "FL",
+      city: "Miami",
+      postalCode: "33156"
+    }]
+  }) {
+    id
+  }
+}
+
+mutation {
+  deletePerson(id: 1001) {
+    id
+  }
+}

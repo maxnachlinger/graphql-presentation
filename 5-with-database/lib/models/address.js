@@ -1,15 +1,5 @@
 'use strict';
 
-/*
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `address_type_id` smallint(6) NOT NULL DEFAULT '1',
-  `address` varchar(150) NOT NULL,
-  `address2` varchar(150) DEFAULT NULL,
-  `district` varchar(100) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `postal_code` varchar(20) DEFAULT NULL,
-  `last_update` timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
- */
 module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define('Address', {
     id: {
